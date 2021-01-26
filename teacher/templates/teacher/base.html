@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Directory</title>
+    <link rel="stylesheet" href="{% static 'teacher/css/bootstrap.css' %}">
+</head>
+<body>
+
+	<div class="container">
+		<h2 class="text-center alert alert-danger">Teachers Directory</h2>
+		{% block content %} 
+
+		{% endblock content %}
+	</div>
+
+	<script src="{% static 'teacher/js/bootstrap.js' %}"></script>
+	<script src="{% static 'teacher/js/jquery.js' %}"></script>
+	<script src="{% static 'teacher/js/popper.js' %}"></script>
+</body>
+</html>

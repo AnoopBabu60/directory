@@ -1,0 +1,42 @@
+{% extends 'teacher/base.html' %}
+{% block content %} 
+<div class="row">
+	<div class="col-sm-4">
+		<h4 class="text-center alert alert-info">Add Teacher</h4>
+		<form action="" method="POST" enctype="multipart/form-data">
+			{% csrf_token %}
+			{{form.as_p}}
+			<input type="submit" class="btn btn-success" value="Add">
+		</form>
+	</div>
+
+	<div class="col-sm-8">
+		<h4 class="text-center alert alert-info">Teachers List</h4>
+		{% if teach %}
+			<table class="table table-striped">
+ 				<thead>
+				    <tr>
+				      <th scope="col">#</th>
+				      <th scope="col">First Name</th>
+				      <th scope="col">Last Name</th>
+				      <th scope="col">Email</th>
+				    </tr>
+				</thead>
+				<tbody>
+					{% for data in teach%}
+				    <tr>
+				      <th scope="row">{{data.id}}</th>
+				      <td>{{data.firstname}}</td>
+				      <td>{{data.lastname}}</td>
+				      <td>{{data.email}}</td>
+				    </tr>
+				    {% endfor %}
+
+				</tbody>
+			</table>
+		{% else %}
+			<h4 class="text-center alert alert-warning">No Records</h4>
+		{% endif %}
+	</div>
+</div>
+{% endblock content %}
