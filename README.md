@@ -8,6 +8,6 @@ The first thing to do is to clone the repository:
 $ git clone https://github.com/AnoopBabu60/directory.git
 ```
 ```sh
-(env)$ cd directory
-(env)$ python manage.py runserver
-``
+cd directory
+python manage.py runserver
+
