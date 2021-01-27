@@ -11,4 +11,6 @@ $ git clone https://github.com/AnoopBabu60/directory.git
 cd directory
 python manage.py runserver
 ```
-
+Admin side access credentials
+username: root
+password: root
