@@ -12,5 +12,7 @@ cd directory
 python manage.py runserver
 ```
 Admin side access credentials
+```sh
 username: root
 password: root
+```
