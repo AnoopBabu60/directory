@@ -10,4 +10,5 @@ $ git clone https://github.com/AnoopBabu60/directory.git
 ```sh
 cd directory
 python manage.py runserver
+```
 
