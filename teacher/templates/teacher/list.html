@@ -5,6 +5,14 @@
 		<h4 class="text-center alert alert-info">Add Teacher</h4>
 		<form action="" method="POST" enctype="multipart/form-data">
 			{% csrf_token %}
+
+			{% if error_message%}
+                <div class="alert alert-danger" role="alert">
+                    {{error_message}}
+                </div>
+            {% endif %}
+
+
 			{{form.as_p}}
 			<input type="submit" class="btn btn-success" value="Add">
 		</form>
@@ -26,7 +34,7 @@
 					{% for data in teach%}
 				    <tr>
 				      <th scope="row">{{data.id}}</th>
-				      <td>{{data.firstname}}</td>
+				      <td><a href="/single/{{data.id}}/{{data.firstname}}">{{data.firstname}}</a></td>
 				      <td>{{data.lastname}}</td>
 				      <td>{{data.email}}</td>
 				    </tr>
